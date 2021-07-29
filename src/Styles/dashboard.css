@@ -287,23 +287,17 @@
   box-shadow: inset 0px 69px 48px -79px rgba(0, 0, 0, 0.17);
   padding: 0px 50px 0 30px;
 }
-.dashboard .dashboard-sections .title {
-  font-size: 16px;
-  color: #2d3355;
-  margin: 50px 0;
-}
 
 .dashboard .dashboard-sections .stats_cards_header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 25px;
 }
 .dashboard .dashboard-sections .stats_cards_header select {
   outline: none;
   border: 1px solid whitesmoke;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 15px;
   color: #797a7c;
   -webkit-box-shadow: 0px 0px 85px 2px rgb(0 0 0 / 17%);
@@ -347,11 +341,24 @@
   color: #2d3355;
 }
 
-.dashboard .dashboard-sections .cards .card .state_card {
-  margin: 23px 0 0 50px;
+.dashboard .dashboard-sections .cards .state_card {
+  margin-top: 23px;
   font-size: 14px;
   color: #7b7b7b;
 }
+.dashboard .dashboard-sections .cards .rate {
+  margin-right: 10px;
+}
+.dashboard .dashboard-sections .cards .rate i {
+  padding-right: 7px;
+}
+.dashboard .dashboard-sections .cards .rate.green {
+  color: rgb(0, 173, 0);
+}
+.dashboard .dashboard-sections .cards .rate.red {
+  color: rgba(219, 15, 15, 0.877);
+}
+
 /* End Dashbard Sections */
 
 /* Start Dashboard Items */
@@ -359,9 +366,59 @@
 .dashboard .dashboard-sections .dashboard_item_content {
   box-shadow: 0px 0px 12px 0px #0000001c;
   border: 2px solid whitesmoke;
-  height: 60vh;
+  height: 90vh;
   border-radius: 15px;
+  padding: 40px;
 }
+
+/* Start Engagement */
+.dashboard_item_content .engagement h3,
+.dashboard_item_content .state {
+  font-size: 15px;
+  color: #2d3355;
+  font-weight: 600;
+}
+
+/* End Engagement */
+/* Start audience */
+
+.dashboard_item_content .audience ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 35%;
+  border-bottom: 1px solid #7b7b7bd3;
+}
+.dashboard_item_content .audience li {
+  padding: 18px 0;
+  font-weight: 700;
+  color: #7b7b7bd3;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+.dashboard_item_content .audience li::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--main-color);
+  transition: 0.3s;
+}
+
+.dashboard_item_content .audience li:hover::after,
+.dashboard_item_content .audience li.active::after {
+  width: 100%;
+}
+.dashboard_item_content .audience li:hover,
+.dashboard_item_content .audience li.active {
+  color: var(--main-color);
+}
+
+/* End audience */
 
 /* End Dashboard Items */
 
@@ -394,7 +451,7 @@
 
 /* Start Slide Acounts */
 .slider_similar_accounts .account {
-  box-shadow: 0 0 15px -8px black;
+  box-shadow: 0 0 15px -8px #0000003d;
   height: 400px;
   width: 370px;
   border-radius: 6px;
@@ -421,6 +478,9 @@
   margin-right: 15px;
   margin-top: 15px;
   cursor: pointer;
+}
+.slider_similar_accounts .header-acount i.fas {
+  color: rgb(255, 196, 4);
 }
 
 .slider_similar_accounts .username {

@@ -8,10 +8,12 @@ import "../../../Styles/dashboard.css";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import Stats_Cards from "./Stats_Cards";
-import Dashboard_item from './Dashboard_item'
-import Audience_Growth from "./Audience_Growth";
-import Slider_Similar_Accounts from "./Slider_Similar_Accounts";
+import Stats_Cards from "./Stats Cards/Stats_Cards";
+import Audience_Growth from "./Dashboard Items/Audience_Growth";
+import Slider_Similar_Accounts from "./Dashboard Items/Slider_Similar_Accounts";
+import Engagement from './Dashboard Items/Engagement'
+import Comments_likes_ratio from './Dashboard Items/Comments_likes_ratio'
+import Audience from './Dashboard Items/Audience'
 function Dashboard() {
   return (
     <>
@@ -26,10 +28,10 @@ function Dashboard() {
             <Navbar />
             <section className="dashboard-sections">
                 <Stats_Cards/>
-                <Dashboard_item Components={Audience_Growth} title="Audience Growth"/>
-                <Dashboard_item Components={Audience_Growth} title="Engagement"/>
-                <Dashboard_item Components={Audience_Growth} title="Comments/likes ratio"/>
-                <Dashboard_item Components={Audience_Growth} title="Audience"/>
+                <Audience_Growth/>
+                <Engagement/>
+                <Comments_likes_ratio/>
+                <Audience/>
                 <Slider_Similar_Accounts/>
             </section>
           </main>

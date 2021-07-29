@@ -1,8 +1,14 @@
 import Logo from "../../../Images/Logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import { IconButton, Avatar } from "@material-ui/core";
+import { useState } from "react";
 
 function Header() {
+  const [input, setInput] = useState('');
+
+  const deletButton = () => {
+    setInput("")
+  };
   return (
     <header className="header">
       <a href="#" className="logo">
@@ -11,7 +17,17 @@ function Header() {
 
       <form className="header-search" action="">
         <SearchIcon className="icon" />
-        <input type="text" />
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <IconButton
+          style={input === "" ? { display: "none" } : { display: "inline" }}
+          onClick={deletButton}
+        >
+          <span>x</span>
+        </IconButton>
         <IconButton>
           <i class="fas fa-sliders-h icon"></i>
         </IconButton>
