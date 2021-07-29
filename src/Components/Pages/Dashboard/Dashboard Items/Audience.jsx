@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Audience() {
-  const [tabs , setTabs] = useState('')
+  const [tabs , setTabs] = useState('Country')
   return (
     <section className="dashboard_item">
       <h2 className="title">Audience</h2>
