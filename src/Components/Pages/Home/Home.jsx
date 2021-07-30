@@ -8,7 +8,7 @@ function Home() {
     setTimeout(history.push("/dashboard"), 10000);
   }, []);
 
-  return <div>test</div>;
+  return <></>;
 }
 
 export default Home;

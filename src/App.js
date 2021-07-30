@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <Route path="/dashboard" component={Dashboard} />
-      <Route path="/" component={Home} />
+      <Route path="/" component={Home}/>
     </Router>
   );
 }
