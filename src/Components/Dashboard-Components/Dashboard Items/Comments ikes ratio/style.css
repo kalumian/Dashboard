@@ -1,5 +1,5 @@
-.dashboard_item_content .likes_ratio {
-  padding-top: 90px;
+.dashboard_item_content .comments-likes-ratio {
+  padding: 90px;
 }
 
 .dashboard .dashboard-sections .dashboard_item_content .comments-likes-ratio{
@@ -9,7 +9,7 @@
   background: white;
 }
 
-@media (min-width: 450px) {
+@media (max-width: 450px) {
   .dashboard .dashboard-sections .dashboard_item_content .comments-likes-ratio{
     padding: 0;
   }
