@@ -2,18 +2,13 @@
 import { Helmet } from "react-helmet";
 
 // import styles & images & icons
-import "../../../Styles/dashboard.css";
+import "./dashboard.css";
 
 //import component
-import Header from "./Header";
-import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
-import Stats_Cards from "./Stats Cards/Stats_Cards";
-import Audience_Growth from "./Dashboard Items/Audience_Growth";
-import Slider_Similar_Accounts from "./Dashboard Items/Slider_Similar_Accounts";
-import Engagement from './Dashboard Items/Engagement'
-import Comments_likes_ratio from './Dashboard Items/Comments_likes_ratio'
-import Audience from './Dashboard Items/Audience'
+import Header from "../../Dashboard-Components/Header/Header";
+import Navbar from "../../Dashboard-Components/Navbar/Navbar";
+import Sidebar from "../../Dashboard-Components/Sidebar/Sidebar";
+import Dashboard_sections from "../../Dashboard-Components/Dashboard Items/Dashboard_Sections";
 function Dashboard() {
   return (
     <>
@@ -26,14 +21,7 @@ function Dashboard() {
           <Sidebar />
           <main className="dashboard-content">
             <Navbar />
-            <section className="dashboard-sections">
-                <Stats_Cards/>
-                <Audience_Growth/>
-                <Engagement/>
-                <Comments_likes_ratio/>
-                <Audience/>
-                <Slider_Similar_Accounts/>
-            </section>
+            <Dashboard_sections/>
           </main>
         </div>
       </div>

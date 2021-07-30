@@ -1,9 +1,14 @@
 // From Swiper JS
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination } from "swiper/core";
+
+// import style file
+import "./style.css";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css";
-import SwiperCore, { Navigation } from "swiper/core";
-SwiperCore.use([Navigation]);
+import "swiper/components/pagination/pagination.min.css";
+
+SwiperCore.use([Navigation, Pagination]);
 
 function Slider_Similar_Accounts() {
   const accounts_list = [1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
@@ -62,6 +67,7 @@ function Slider_Similar_Accounts() {
       <h2 className="title">Similar account</h2>
       <div className="content">
         <Swiper
+          pagination={true}
           wrapperTag="ul"
           navigation={true}
           className="mySwiper"
